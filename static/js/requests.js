@@ -59,11 +59,11 @@ const data = {
             "_certificates": [
                 {
                     "name": "CATALYST - for exemplery contribution",
-                    "url": "./static/images/certificate_Kudo1.png"
+                    "url": "./static/images/certificate_kudo1.png"
                 },
                 {
                     "name": "SPOT RECOGNITION - for excellent commitment",
-                    "url": "./static/images/certificate_Kudo2.png"
+                    "url": "./static/images/certificate_kudo2.png"
                 }
             ]
         },

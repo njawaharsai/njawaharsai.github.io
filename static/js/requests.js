@@ -12,31 +12,50 @@ const data = {
     ],
     "experiences": [
         {
+            "_id": "64dc556764a7e36fadd9ff89",
+            "_company": "Encando.AI",
+            "_mentor": "Dr. Arun Srinivasa",
+            "_mentor_role": "Assistant Professor",
+            "_website": "https://encando.com/",
+            "_description": [
+                "Implemented a RAG-based chatbot to assist students with concept explanations and mathematical calculations on an educational platform offering 25+ master’s courses, resulting in a 40% increase in platform usage.",
+                "Streamlined an automated RAG pipeline to convert course materials into a vector database and fine-tune the LLM, resulting in a 18% improvement in chatbot accuracy for answering student queries",
+                "Leveraged advanced NLP techniques and built an LLM-based question generation model utilizing course materials to create questions with advanced reasoning, decreasing professor workload for exercise preparation by 50%."
+            ],
+            "_duration": "May 2024 - Present",
+            "_role": "Graduate Research Assistant",
+            "_tech": [ "LLM Fine-tuning", "RAG", "React JS", "Next.js", "AWS", "Prompt Engineering", "ReAct Agents" ]
+        },
+        {
             "_id": "64dc556764a7e36f9dc9ff89",
             "_company": "Stochastic Geo-mechanics Lab",
             "_mentor": "Dr. Medina",
             "_mentor_role": "Assistant Professor",
+            "_website": "https://zenon-sgl.tamu.edu/",
             "_description": [
-                "Visualized dashboards for multiple stages of supply chain with over 1000+ datasets processed using Dataiku and created templates using Angular and .NET Framework.",
-                "Leveraged Bayesian models to analyze the impact on supply chain dynamics."
+                "Visualized dashboards for multiple stages of supply chain with over 1000+ datasets processed using Dataiku and created templates using Angular, .NET Framework and Tableau for advanced data visualization.",
+                "Leveraged Bayesian machine learning models to analyze the impact of various risk scenarios on supply chain dynamics."
             ],
-            "_duration": "May 2024 - September 2024",
-            "_role": "Software Developer",
-            "_tech": [ "Angular CLI", "Asp.Net", "Dataiku", "SQL" ]
+            "_duration": "February 2024 - April 2024",
+            "_role": "Research Assistant",
+            "_tech": [ "Angular CLI", "Asp.Net", "Dataiku", "PostgreSQL" ]
         },
         {
             "_id": "64dc556764a7e36f9dc9ff16",
             "_company": "GEP Worldwide",
             "_mentor": "Mowlali Pinjari",
-            "_mentor_role": "Technical Lead Software Engineer",
+            "_mentor_role": "Senior Principle Software Engineer",
+            "_website": "https://www.gep.com/",
             "_description": [
-                "Worked on Angular CLI, Asp.net and SQL. Designed and created a Angular CLI component and an Asp.net server method.",
-                "Angular CLI component does post and get requests to a Asp.net server that communicates with different SQL databases based on user's domain.",
-                "As part of the Internship program, Our team of 4 Interns have won the Intern Hackathon conducted for Interns by GEP ∥ Problem Statement : Develop Notification popup using Angular CLI with GEP Plugin architecture, typescript, Node.Js and MongoDB."
+                "Developed efficient .NET RESTful APIs leveraging Software Design Patterns that supported high traffic loads, increasing system reliability. Introduced cloud-native solutions that reduced server costs by 15%, using Azure and Kubernetes.",
+                "Led the implementation of low-code functionality using Angular plugin architecture for shipment division applications, resulting in a significant 25% reduction in development man-hours.",
+                "Collaborated with the platform team to migrate 150 million documents from SQL to MongoDB by consolidating multiple schemas into a unified structure using PySpark RDDs and Azure Databricks, achieving a 12% reduction in database load.",
+                "Mentored 2 junior developers, enhancing their skills in Angular, .NET and MongoDB to improve team productivity.",
+                "Recognized with Spot Recognition and Catalyst awards for outstanding contributions."
             ],
             "_duration": "July 2022 - November 2023",
             "_role": "Software Engineer",
-            "_tech": [ "Angular CLI", "Asp.Net", "SQL" ],
+            "_tech": [ "Angular CLI", "Asp.Net", "MongoDB", "SQL", "Azure Cloud", "Kubernetes", "Kafka", "Elastic Search", "Devops" ],
             "_certificates": [
                 {
                     "name": "CATALYST - for exemplery contribution",
@@ -53,10 +72,11 @@ const data = {
             "_company": "GEP Worldwide",
             "_mentor": "Mahesh Konda",
             "_mentor_role": "Manager Engineering",
+            "_website": "https://www.gep.com/",
             "_description": [
-                "Worked on Angular CLI, Asp.net and SQL. Designed and created a Angular CLI component and an Asp.net server method.",
-                "Angular CLI component does post and get requests to a Asp.net server that communicates with different SQL databases based on user's domain.",
-                "As part of the Internship program, Our team of 4 Interns have won the Intern Hackathon conducted for Interns by GEP ∥ Problem Statement : Develop Notification popup using Angular CLI with GEP Plugin architecture, typescript, Node.Js and MongoDB."
+                "Designed an end-to-end Angular plugin and .NET API endpoints, allowing over 140 clients to search, access and update real time domain-specific inventory data, reducing overall processing time.",
+                "Introduced automation testing techniques for legacy code and improved code coverage by 52% through the implementation of unit tests and optimized testing strategies, significantly enhancing code quality and stability.",
+                "Secured 1st prize in Techathon competition conducted for GEP interns across India."
             ],
             "_duration": "May 2021 - July 2021",
             "_certificates": [
@@ -69,8 +89,8 @@ const data = {
                     "url": "./static/images/certificate_intern.png"
                 }
             ],
-            "_role": "Technology Intern",
-            "_tech": [ "Angular CLI", "Asp.Net", "SQL" ]
+            "_role": "Software Engineering Intern",
+            "_tech": [ "Angular CLI", "Asp.Net", "SQL", "Plug-in Architecture" ]
         }
     ],
     "education": [
@@ -101,7 +121,7 @@ const data = {
             "_branch": "CSE",
             "_start": "2018",
             "_end": "2022",
-            "_score": "8.3/10",
+            "_score": "8.4/10",
             "_courses": [
                 "Discrete Mathematics for Computer Science",
                 "Linear Algebra",
@@ -123,7 +143,7 @@ const data = {
             "_description": "A Crowdsourcing Application to Digitize and Store Handwritten Medical Prescriptions",
             "_github": "https://github.com/JawaharSaiNathani/BTP_Annotator",
             "_image": "./static/images/proj_aa.png",
-            "_tech": [ "Python", "React JS", "CNN"],
+            "_tech": [ "Python", "React JS", "Django", "CNN", "Flutter" ],
             "_detailed_description": [
                 "A web-based crowdsourcing application to digitize and store handwritten medical prescriptions and add a text layer to enhance document search.",
                 "The tool utilizes subregions of a single annotation to train a subregion-detection OCR model. These trained models can then be grouped into multiple model pools as per specific requirements.Users can employ single or multiple model pools to annotate handwritten documents and subsequently add text layers to the document. Grouped model pools can also be shared with others within their organization.",
@@ -239,7 +259,15 @@ const data = {
             "_description": "Simulate Assembly Code",
             "_github": "https://github.com/JawaharSaiNathani/ASM_Simulator",
             "_image": "./static/images/proj_al.png",
-            "_tech": [ "C/C++", "Computer Architecture"],
+            "_tech": [ "C/C++", "Computer Architecture", "Yacc", "LEX", "ARM Architecture"],
+            "_detailed_description": [
+                "Built Virtual Machine (for ARM Architecture), Compiler and Assembler from scratch for a custom programminglanguage.",
+                "Used C language to generate 3-address code and subsequently convert it into X86 Assembly Language.",
+                "Later implemented Operating System and Processor, which was able to run basic programs includingrecursion and functions."
+            ],
+            "_duration": "July 2019 - Sept 2019",
+            "_mentor": "Dr. Raghavendra",
+            "_mentor_role": "Assistant Professor",
             "_tags": "c-cpp"
         },
         {
@@ -296,6 +324,8 @@ function getExperiences() {
                             <small><span class="text-primary">Role: </span><span style="color: #075CA7;">${exp._role}</span></small><br>
                             <small><span class="text-primary">Mentor: </span><span style="color: #075CA7;">${exp._mentor}</span></small><br>
                             <div class="experience-description" id="exp-desc-${exp._id}" style="display: none; margin-top: 10px;">
+                                <small><span class="text-primary">Mentor Role: </span><span style="color: #075CA7;">${exp._mentor_role}</span></small><br>
+                                <small><span class="text-primary">Website: </span><a href="${exp._website}" style="color: #075CA7;">${exp._website}</a></small><br>
                                 <h6 class="mb-2">Tech Stack:</h6>
                                 <ul class="list-unstyled" style="padding-left: 1em;">
                                     ${exp._tech.map(point => `<li style="text-indent: -10px; padding-left: 10px;">• ${point}</li>`).join('')}

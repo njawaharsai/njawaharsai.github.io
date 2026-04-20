@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/jawaharnathani/.claude/plugins/cache/ui-ux-pro-max-skill/ui-ux-pro-max/2.5.0/.claude/skills/ui-ux-pro-max/**)",
+      "Bash(python3 scripts/search.py \"personal portfolio software engineer professional elegant minimal\" --design-system -p \"Jawahar Portfolio\" -f markdown)",
+      "Bash(npm run *)"
+    ]
+  }
+}

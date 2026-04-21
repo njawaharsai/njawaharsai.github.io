@@ -57,7 +57,7 @@ export default function Projects() {
         </div>
 
         {/* Cards grid */}
-        <div className={`grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4 transition-all duration-500 delay-150 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
+        <div className={`grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 transition-all duration-500 delay-150 ${isInView ? 'opacity-100' : 'opacity-0'}`}>
           {visible.map((proj, i) => {
             const card = cardData.find(c => c.projectId === proj.id);
             if (!card) return null;

@@ -91,7 +91,7 @@ function ChapterIntro({ onNext, onViewFull }: { onNext: () => void; onViewFull: 
   }, [done2, startL2]);
 
   return (
-    <div className="relative flex-1 flex items-center justify-center overflow-x-hidden overflow-y-auto"
+    <div className="relative w-full flex-1 flex flex-col items-center justify-start lg:justify-center overflow-x-hidden pt-4 pb-12 sm:pb-16 lg:py-0"
       style={{ background: 'linear-gradient(145deg, #0A0300 0%, #150600 50%, #0A0200 100%)' }}>
 
       <SectionTracer variant={0} dark />
@@ -126,7 +126,7 @@ function ChapterIntro({ onNext, onViewFull }: { onNext: () => void; onViewFull: 
       </div>
 
       {/* Main content — centered */}
-      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-10 py-16 text-center">
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 sm:px-10 py-10 sm:py-14 lg:py-12 text-center">
 
         {/* Pre-label */}
         <div className="opacity-0 animate-fade-in mb-8 inline-flex items-center gap-3"
@@ -254,7 +254,7 @@ function ChapterHero() {
   }, [txt, fwd, ri]);
 
   return (
-    <div className="relative flex-1 flex items-center overflow-hidden"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(145deg, #FFF7ED 0%, #FEFCF8 45%, #FFFBEB 100%)' }}>
 
       <SectionTracer variant={1} />
@@ -276,8 +276,8 @@ function ChapterHero() {
 
       <div className="story-bg-number light">{CHAPTERS[0].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
 
           {/* Text */}
           <div className="lg:col-span-7 order-2 lg:order-1">
@@ -390,7 +390,7 @@ function ChapterAbout() {
   const { visibleCount } = useWordReveal(words, 52, 700);
 
   return (
-    <div className="relative flex-1 flex items-center overflow-x-hidden overflow-y-auto" style={{ background: '#FFFFFF' }}>
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0" style={{ background: '#FFFFFF' }}>
       <SectionTracer variant={2} />
       {/* Concentric decorative rings */}
       <div className="absolute right-0 top-[50%] -translate-y-1/2 pointer-events-none hidden lg:block overflow-hidden">
@@ -415,8 +415,8 @@ function ChapterAbout() {
       <div className="absolute inset-0 bg-grid-warm bg-grid-md opacity-50" />
       <div className="story-bg-number light">{CHAPTERS[1].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-11 gap-10 items-start">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-11 gap-8 sm:gap-10 items-start">
           {/* Left */}
           <div className="lg:col-span-6">
             <Reveal delay={0.1}>
@@ -445,7 +445,7 @@ function ChapterAbout() {
             </div>
 
             <Reveal delay={0.95}>
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {[{ n: '20,000+', l: 'Users Served' }, { n: '95%', l: 'Latency Cut' }, { n: '150M+', l: 'Docs Migrated' }].map(s => (
                   <div key={s.l} className="s-card p-4 text-center">
                     <div className="stat-value text-2xl mb-0.5">{s.n}</div>
@@ -496,14 +496,14 @@ function ChapterAbout() {
 ══════════════════════════════════════════════════════════════════════════════ */
 function ChapterExperience() {
 
-  const stripStrong = (text: string) => text.replace(/<strong>.*?<\/strong>/gis, '');
+  const stripStrong = (text: string) => text.replace("<strong>", '').replace("</strong>", '');
 
   const featuredStories = storyGroups
     .flatMap(group => group.stories.map(story => ({ ...story, role: group.role, company: group.company })))
     .slice(0, 2);
 
   return (
-    <div className="relative flex-1 flex items-center overflow-x-hidden overflow-y-auto"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(145deg, #110500 0%, #1C0A00 50%, #0F0400 100%)' }}>
 
       <SectionTracer variant={3} dark />
@@ -518,7 +518,7 @@ function ChapterExperience() {
       <div className="absolute inset-0 bg-grid-dark bg-grid-md opacity-40" />
       <div className="story-bg-number dark">{CHAPTERS[2].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
           <FunPhrase phrase={CHAPTERS[2].phrase} emoji={CHAPTERS[2].emoji} dark />
         </Reveal>
@@ -544,11 +544,11 @@ function ChapterExperience() {
                     <div className="mt-1 font-semibold text-base" style={{ color: '#FB923C' }}>{story.role} · {story.company}</div>
                   </div>
                   <span className="shrink-0 rounded-full border border-orange-900/70 bg-orange-950/45 px-2.5 py-1 text-xs font-semibold text-orange-200/70">
-                    Story
+                    Current
                   </span>
                 </div>
                 <ul className="space-y-1.5 mb-3">
-                  {[story.situation, story.lesson].map((d, j) => (
+                  {[story.situation, story.decision].map((d, j) => (
                     <li key={j} className="flex items-start gap-2 text-orange-100/60 text-[16px] leading-snug">
                       <Zap size={10} className="text-accent mt-1 shrink-0" />
                       {stripStrong(d)}
@@ -590,7 +590,7 @@ function ChapterExperience() {
 ══════════════════════════════════════════════════════════════════════════════ */
 function ChapterEducation() {
   return (
-    <div className="relative flex-1 flex items-center overflow-x-hidden overflow-y-auto"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(155deg, #FFFBEB 0%, #FFF7ED 50%, #FEFCF8 100%)' }}>
 
       <SectionTracer variant={4} />
@@ -613,7 +613,7 @@ function ChapterEducation() {
 
       <div className="story-bg-number light">{CHAPTERS[3].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
           <FunPhrase phrase={CHAPTERS[3].phrase} emoji={CHAPTERS[3].emoji} />
         </Reveal>
@@ -681,7 +681,7 @@ function ChapterProjects() {
   const featured = projects.filter(p => p.featured).slice(0, 4);
 
   return (
-    <div className="relative flex-1 flex items-center overflow-x-hidden overflow-y-auto"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(145deg, #0A0500 0%, #0F0700 60%, #070300 100%)' }}>
 
       <SectionTracer variant={5} dark />
@@ -696,7 +696,7 @@ function ChapterProjects() {
       <div className="absolute inset-0 bg-grid-dark bg-grid-md opacity-30" />
       <div className="story-bg-number dark">{CHAPTERS[4].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
           <FunPhrase phrase={CHAPTERS[4].phrase} emoji={CHAPTERS[4].emoji} dark />
         </Reveal>
@@ -710,7 +710,7 @@ function ChapterProjects() {
           </p>
         </Reveal>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           {featured.map((proj, i) => {
             const card = cardData.find(c => c.projectId === proj.id);
             if (!card) return null;
@@ -750,7 +750,7 @@ const ACHIEVEMENTS = [
 
 function ChapterAwards() {
   return (
-    <div className="relative flex-1 flex items-center overflow-x-hidden overflow-y-auto"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(155deg, #FFFBEB 0%, #FEF3C7 40%, #FFF7ED 100%)' }}>
 
       <SectionTracer variant={6} />
@@ -772,7 +772,7 @@ function ChapterAwards() {
       <div className="absolute inset-0 bg-dot-warm bg-dot-md opacity-50" />
       <div className="story-bg-number light">{CHAPTERS[5].n}</div>
 
-      <div className="section-container w-full py-8 relative z-10">
+      <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
           <FunPhrase phrase={CHAPTERS[5].phrase} emoji={CHAPTERS[5].emoji} />
         </Reveal>
@@ -833,7 +833,7 @@ function ChapterAwards() {
 ══════════════════════════════════════════════════════════════════════════════ */
 function ChapterConnect({ onViewFull }: { onViewFull: () => void }) {
   return (
-    <div className="relative flex-1 flex items-center overflow-hidden"
+    <div className="relative w-full flex-1 flex flex-col justify-start lg:justify-center overflow-x-hidden pt-2 pb-10 sm:pt-4 sm:pb-14 lg:py-0"
       style={{ background: 'linear-gradient(145deg, #0F0400 0%, #1C0A00 50%, #0C0300 100%)' }}>
 
       <SectionTracer variant={7} dark />
@@ -855,7 +855,7 @@ function ChapterConnect({ onViewFull }: { onViewFull: () => void }) {
 
       <div className="story-bg-number dark">{CHAPTERS[6].n}</div>
 
-      <div className="section-container w-full py-10 relative z-10">
+      <div className="section-container w-full py-5 sm:py-8 md:py-10 lg:py-7 relative z-10">
         <Reveal delay={0.1}>
           <FunPhrase phrase={CHAPTERS[6].phrase} emoji={CHAPTERS[6].emoji} dark />
         </Reveal>
@@ -955,7 +955,7 @@ export default function StoryShell({ onViewFull }: { onViewFull: () => void }) {
   /* Last slide: switch to full portfolio after 7s if user doesn’t click */
   useEffect(() => {
     if (idx !== CHAPTERS.length - 1) return;
-    const id = window.setTimeout(() => onViewFullRef.current(), 5000);
+    const id = window.setTimeout(() => onViewFullRef.current(), 7000);
     return () => window.clearTimeout(id);
   }, [idx]);
 
@@ -1018,7 +1018,7 @@ export default function StoryShell({ onViewFull }: { onViewFull: () => void }) {
       {/* Chapter body */}
       <div ref={bodyRef}
         key={idx}
-        className={`flex-1 flex flex-col overflow-x-hidden overflow-y-auto ${exiting ? 'story-chapter-exit' : 'story-chapter-enter'}`}>
+        className={`story-body-scroll flex-1 min-h-0 flex flex-col overflow-x-hidden overflow-y-auto ${exiting ? 'story-chapter-exit' : 'story-chapter-enter'}`}>
         {chapter}
       </div>
 

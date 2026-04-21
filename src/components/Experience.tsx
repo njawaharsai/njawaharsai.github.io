@@ -128,7 +128,12 @@ export default function Experience() {
                           </div>
                         </button>
 
-                        <div className={`overflow-hidden transition-all duration-400 ${isStoryOpen ? 'max-h-[1000px]' : 'max-h-0'}`}>
+                        <div
+                          className={`grid transition-[grid-template-rows] duration-400 ease-in-out ${
+                            isStoryOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                          }`}
+                        >
+                          <div className="min-h-0 overflow-hidden">
                           <div className="border-t border-border px-5 pb-5 pt-4">
                             <div className="grid gap-3 md:grid-cols-2">
                               {[
@@ -148,6 +153,7 @@ export default function Experience() {
                                 <span key={pill} className="tag text-[13px] py-0.5">{pill}</span>
                               ))}
                             </div>
+                          </div>
                           </div>
                         </div>
                       </div>
@@ -217,7 +223,12 @@ export default function Experience() {
                           )}
                         </div>
                       </button>
-                      <div className={`overflow-hidden transition-all duration-400 ease-in-out ${isOpen ? 'max-h-[1000px]' : 'max-h-0'}`}>
+                      <div
+                        className={`grid transition-[grid-template-rows] duration-400 ease-in-out ${
+                          isOpen ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'
+                        }`}
+                      >
+                        <div className="min-h-0 overflow-hidden">
                         <div className="border-t border-border px-6 pb-6 pt-5">
                           {exp.tech.length > 6 && (
                             <div className="mb-5 flex flex-wrap gap-1.5">
@@ -254,6 +265,7 @@ export default function Experience() {
                         </div>
                       </div>
                     </div>
+                  </div>
                   </div>
                 );
               })}

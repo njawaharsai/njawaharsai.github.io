@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F2EDE4"/>
+      <stop offset="100%" stop-color="#E6DDD0"/>
+    </linearGradient>
+    <linearGradient id="jgrad" x1="0" y1="10" x2="0" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F07030"/>
+      <stop offset="100%" stop-color="#C04E0E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- Inner border -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="13" stroke="#D8C8B2" stroke-width="0.75" fill="none"/>
+
+  <!-- J letterform -->
+  <path d="
+    M 19,10
+    L 45,10
+    Q 46.5,10 46.5,11.5
+    L 46.5,17.5
+    Q 46.5,19 45,19
+    L 40,19
+    L 40,42
+    Q 40,56 27,56
+    Q 14,56 14,44
+    L 14,40
+    Q 14,38.5 15.5,38.5
+    L 21,38.5
+    Q 22.5,38.5 22.5,40
+    L 22.5,43
+    Q 22.5,48 27,48
+    Q 31.5,48 31.5,43
+    L 31.5,19
+    L 19,19
+    Q 17.5,19 17.5,17.5
+    L 17.5,11.5
+    Q 17.5,10 19,10
+    Z
+  " fill="url(#jgrad)"/>
+
+  <!-- Top-left accent dot -->
+  <circle cx="10" cy="10" r="2" fill="#D95F1A" opacity="0.45"/>
+
+  <!-- Bottom-right accent dot (small trio) -->
+  <circle cx="54" cy="54" r="2" fill="#D95F1A" opacity="0.35"/>
+  <circle cx="54" cy="54" r="4.5" stroke="#D95F1A" stroke-width="0.6" opacity="0.15" fill="none"/>
+
+</svg>

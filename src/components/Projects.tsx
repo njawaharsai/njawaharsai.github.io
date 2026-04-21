@@ -36,7 +36,7 @@ export default function Projects() {
             <span style={{ background: 'linear-gradient(135deg,#F97316,#F59E0B)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }}>built</span>
           </h2>
           <p className="text-orange-200/100 text-[15px] leading-relaxed max-w-xl">
-            {projects.length} projects across AI/ML, full-stack, systems, and iOS — from real users to research papers.
+            {projects.length} projects across AI/ML, full-stack, systems, and iOS - from real users to research papers.
           </p>
         </div>
 

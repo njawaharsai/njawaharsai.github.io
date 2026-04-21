@@ -431,10 +431,10 @@ export const cardData: CardData[] = [
   <circle cx="14" cy="13" r="4.5" fill="rgba(255,95,87,.55)"/>
   <circle cx="27" cy="13" r="4.5" fill="rgba(255,189,46,.55)"/>
   <circle cx="40" cy="13" r="4.5" fill="rgba(40,200,64,.55)"/>
-  <text x="128" y="17" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="rgba(200,212,232,.3)" letter-spacing=".1em">xinu — shell</text>
+  <text x="128" y="17" text-anchor="middle" font-family="IBM Plex Mono" font-size="7" fill="rgba(200,212,232,.3)" letter-spacing=".1em">xinu - shell</text>
   <line x1="0" y1="26" x2="256" y2="26" stroke="rgba(200,212,232,.06)" stroke-width="1"/>
   <text class="clr1" x="12" y="46" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.9)">xinu$ <tspan fill="rgba(200,212,232,.6)">boot</tspan></text>
-  <text class="clr2" x="12" y="61" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.55)">  XINU OS v2.1 — Modified</text>
+  <text class="clr2" x="12" y="61" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.55)">  XINU OS v2.1 - Modified</text>
   <text class="clr2" x="12" y="75" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.38)">  Custom shell loaded ✓</text>
   <text class="clr3" x="12" y="92" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.9)">xinu$ <tspan fill="rgba(200,212,232,.6)">ls /vfs</tspan></text>
   <text class="clr3" x="12" y="106" font-family="IBM Plex Mono" font-size="7.5" fill="rgba(200,212,232,.38)">  /bin  /etc  /tmp  /proc</text>

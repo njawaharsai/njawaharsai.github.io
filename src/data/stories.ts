@@ -18,18 +18,6 @@ export interface StoryGroup {
   stories: StoryCard[];
 }
 
-export interface Belief {
-  num: string;
-  statement: string;
-  why: string;
-}
-
-export interface Redo {
-  context: string;
-  what: string;
-  why: string;
-}
-
 export const storyGroups: StoryGroup[] = [
   {
     role: 'Founding Software Engineer',
@@ -191,66 +179,5 @@ export const storyGroups: StoryGroup[] = [
         pills: ['.NET (xUnit)', 'Test automation', 'Code coverage', 'Legacy refactor', 'Techathon 1st Prize'],
       },
     ],
-  },
-];
-
-export const beliefs: Belief[] = [
-  {
-    num: '01',
-    statement: 'AI grading needs calibration before it ever touches a student.',
-    why: 'You can\'t send a rubric and an LLM at a submission and call it grading. The model needs to learn the instructor\'s strictness standard. I learned this by watching instructors reject technically correct but stylistically wrong grades.',
-  },
-  {
-    num: '02',
-    statement: 'Make AI uncertainty visible, not averaged away.',
-    why: 'Every AI system I\'ve built eventually faced the same pressure: make it look more confident. The better move is to surface disagreement as a signal. When two independent models disagree sharply, that\'s the most important information the system can give you.',
-  },
-  {
-    num: '03',
-    statement: 'Foundations compound. Choose them like you\'ll live with them for years.',
-    why: 'At Encando, every architecture choice I made in the first weeks became the structure the team built on for 12+ months. Good foundations make a team move faster in month 12 than month 1. Bad ones impose a tax on every single feature forever.',
-  },
-  {
-    num: '04',
-    statement: 'Developer confidence is infrastructure. It deserves the same investment.',
-    why: 'Before we had a CI/CD pipeline, deployments were scary events. After — routine, daily, unremarkable. Safe, fast deployments unlock a feedback loop that nothing else can replicate: ship small, learn fast, fix cheap.',
-  },
-  {
-    num: '05',
-    statement: 'Default behaviors carry moral weight. Ask who gets hurt by them.',
-    why: 'FIFO queues, round-robin balancing — these feel neutral but they\'re not. They encode assumptions about who matters. When I built the OCR fair scheduler, I had to explicitly ask: who gets hurt by FIFO? That\'s a real person with a real frustration.',
-  },
-  {
-    num: '06',
-    statement: 'The eval loop is the real engineering work in AI systems.',
-    why: 'Most teams treat evaluation as a checkpoint before shipping. I think it\'s the core of the work. A system that evaluates itself frequently improves faster than one that evaluates itself carefully but rarely.',
-  },
-];
-
-export const redos: Redo[] = [
-  {
-    context: 'Encando AI — Initial RAG Pipeline',
-    what: 'I\'d add observability before shipping, not after users complained.',
-    why: 'We launched ChaTA with no systematic way to measure retrieval quality. No RAGAS baselines, no query failure logs, no way to know what was breaking for which students. Building the eval framework first would have caught retrieval regressions before users experienced them.',
-  },
-  {
-    context: 'Encando AI — DynamoDB Schema Design',
-    what: 'I\'d design access patterns before tables, not tables before access patterns.',
-    why: 'I designed the DynamoDB tables based on the domain model rather than the query patterns the application would actually run. Months later, I had to add 8+ GSIs to fix hotspot queries that should have been primary key design from the start.',
-  },
-  {
-    context: 'Encando AI — AI Grading v1',
-    what: 'I\'d ship instructor calibration in v1, not treat it as a nice-to-have.',
-    why: 'The first grading version had no grading style calibration — it graded against a generic rubric. Instructors modified a third of the grades. Shipping calibration in v1 would have gotten real adoption 3 months earlier.',
-  },
-  {
-    context: 'GEP Worldwide — Angular Plugin Architecture',
-    what: 'I\'d define the plugin contract before building the first plugin.',
-    why: 'We built the plugin interface and the first plugins simultaneously. The interface changed 3 times. A week defining the contract upfront would have avoided a painful refactor of the first two plugins. Interfaces are cheap to change on paper; expensive in code.',
-  },
-  {
-    context: 'GEP Worldwide — SQL → MongoDB Migration',
-    what: 'I\'d instrument the reconciliation layer before running it, not after.',
-    why: 'We built the reconciliation logic and ran it, then added detailed logging after we caught the first edge case. We got lucky. Observability in a migration pipeline isn\'t optional; it\'s what separates "we think it worked" from "we know it worked."',
   },
 ];

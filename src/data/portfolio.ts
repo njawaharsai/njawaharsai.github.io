@@ -244,7 +244,7 @@ export const projects: Project[] = [
   {
     id: "vatc",
     title: "VATC",
-    description: "Virtual Assistant to Type and Code — voice-driven Python code generation using BERT + speech recognition.",
+    description: "Virtual Assistant to Type and Code - voice-driven Python code generation using BERT + speech recognition.",
     image: "./images/proj_vatc.png",
     tech: ["Python", "Tkinter", "BERT", "NLP", "Sentiment Analysis"],
     github: "https://github.com/JawaharSaiNathani/VATC",
@@ -273,7 +273,7 @@ export const projects: Project[] = [
   {
     id: "teachable-machine",
     title: "Teachable Machine",
-    description: "Full-stack app for training custom image classification models — a self-hosted Google Teachable Machine.",
+    description: "Full-stack app for training custom image classification models - a self-hosted Google Teachable Machine.",
     image: "./images/proj_tm.png",
     tech: ["React JS", "Flask", "Keras", "TensorFlow", "sklearn"],
     github: "https://github.com/JawaharSaiNathani/TeachableMachine",
@@ -287,7 +287,7 @@ export const projects: Project[] = [
   {
     id: "type-news",
     title: "Type News",
-    description: "Practice typing while staying informed — real-time news scraped and served as typing exercises.",
+    description: "Practice typing while staying informed - real-time news scraped and served as typing exercises.",
     image: "./images/proj_typenews.png",
     tech: ["React JS", "Flask", "Selenium"],
     github: "https://github.com/JawaharSaiNathani/type-news-frontend",
@@ -316,7 +316,7 @@ export const projects: Project[] = [
   {
     id: "custom-compiler",
     title: "Custom Language Compiler",
-    description: "Full compiler for a C-like custom language — lexer, parser, semantic analysis, and code generation.",
+    description: "Full compiler for a C-like custom language - lexer, parser, semantic analysis, and code generation.",
     image: "./images/proj_compiler.png",
     tech: ["C++", "Compiler Design", "Yacc", "LEX"],
     github: "https://github.com/JawaharSaiNathani/Custom-CD-Compiler",

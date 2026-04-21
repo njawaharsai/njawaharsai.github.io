@@ -137,13 +137,17 @@ export default function Experience() {
                           <div className="border-t border-border px-5 pb-5 pt-4">
                             <div className="grid gap-3 md:grid-cols-2">
                               {[
-                                { label: 'Situation', value: story.situation },
-                                { label: 'Decision', value: story.decision },
-                                { label: 'Outcome', value: story.outcome },
-                                { label: 'Lesson', value: story.lesson },
+                                { label: 'The Situation', value: story.situation },
+                                { label: 'The Decision', value: story.decision },
+                                { label: 'The Outcome', value: story.outcome },
+                                { label: 'The Lesson', value: story.lesson },
                               ].map(item => (
                                 <div key={item.label} className="rounded-lg border border-border bg-white p-3.5">
-                                  <p className="mb-1 text-[12px] font-bold uppercase tracking-[0.18em] text-accent">{item.label}</p>
+                                  <p className={`mb-1 text-[12px] font-bold uppercase tracking-[0.18em] 
+                                    ${item.label === 'The Situation' ? 'text-[#6A8FBB]' :
+                                      item.label === 'The Decision' ? 'text-[#D95F1A]' :
+                                      item.label === 'The Outcome' ? 'text-[#7AAB8A]' : 'text-[#B8895A]'}`
+                                    }>{item.label}</p>
                                   <p className="text-md leading-relaxed text-text-secondary">{renderStrongText(item.value)}</p>
                                 </div>
                               ))}

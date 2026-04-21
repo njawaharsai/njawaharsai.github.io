@@ -274,7 +274,7 @@ function ChapterHero() {
       <div className="absolute right-[12%] top-[20%] w-[260px] h-[260px] rounded-full opacity-[0.09]"
         style={{ border: '1px solid #F59E0B' }} />
 
-      <div className="story-bg-number light">{CHAPTERS[0].n}</div>
+      <div className="story-bg-number light">{CHAPTERS[1].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 sm:gap-10 lg:gap-16 items-center">
@@ -282,7 +282,7 @@ function ChapterHero() {
           {/* Text */}
           <div className="lg:col-span-7 order-2 lg:order-1">
             <Reveal delay={0.1}>
-              <FunPhrase phrase={CHAPTERS[0].phrase} emoji={CHAPTERS[0].emoji} />
+              <FunPhrase phrase={CHAPTERS[1].phrase} emoji={CHAPTERS[1].emoji} />
             </Reveal>
 
             {/* Name */}
@@ -413,14 +413,14 @@ function ChapterAbout() {
 
       {/* Grid bg */}
       <div className="absolute inset-0 bg-grid-warm bg-grid-md opacity-50" />
-      <div className="story-bg-number light">{CHAPTERS[1].n}</div>
+      <div className="story-bg-number light">{CHAPTERS[2].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-11 gap-8 sm:gap-10 items-start">
           {/* Left */}
           <div className="lg:col-span-6">
             <Reveal delay={0.1}>
-              <FunPhrase phrase={CHAPTERS[1].phrase} emoji={CHAPTERS[1].emoji} />
+              <FunPhrase phrase={CHAPTERS[2].phrase} emoji={CHAPTERS[2].emoji} />
             </Reveal>
             <Reveal delay={0.2}>
               <h2 className="font-archivo font-black leading-[0.95] mb-3 tracking-tight"
@@ -516,11 +516,11 @@ function ChapterExperience() {
 
       {/* Grid */}
       <div className="absolute inset-0 bg-grid-dark bg-grid-md opacity-40" />
-      <div className="story-bg-number dark">{CHAPTERS[2].n}</div>
+      <div className="story-bg-number dark">{CHAPTERS[3].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
-          <FunPhrase phrase={CHAPTERS[2].phrase} emoji={CHAPTERS[2].emoji} dark />
+          <FunPhrase phrase={CHAPTERS[3].phrase} emoji={CHAPTERS[3].emoji} dark />
         </Reveal>
 
         <Reveal delay={0.2}>
@@ -611,11 +611,11 @@ function ChapterEducation() {
         </div>
       ))}
 
-      <div className="story-bg-number light">{CHAPTERS[3].n}</div>
+      <div className="story-bg-number light">{CHAPTERS[4].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
-          <FunPhrase phrase={CHAPTERS[3].phrase} emoji={CHAPTERS[3].emoji} />
+          <FunPhrase phrase={CHAPTERS[4].phrase} emoji={CHAPTERS[4].emoji} />
         </Reveal>
         <Reveal delay={0.2}>
           <h2 className="font-archivo font-black leading-[0.95] mb-2 tracking-tight"
@@ -694,11 +694,11 @@ function ChapterProjects() {
 
       {/* Grid */}
       <div className="absolute inset-0 bg-grid-dark bg-grid-md opacity-30" />
-      <div className="story-bg-number dark">{CHAPTERS[4].n}</div>
+      <div className="story-bg-number dark">{CHAPTERS[5].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
-          <FunPhrase phrase={CHAPTERS[4].phrase} emoji={CHAPTERS[4].emoji} dark />
+          <FunPhrase phrase={CHAPTERS[5].phrase} emoji={CHAPTERS[5].emoji} dark />
         </Reveal>
         <Reveal delay={0.2}>
           <h2 className="font-archivo font-black leading-[0.95] mb-2 tracking-tight text-white"
@@ -770,11 +770,11 @@ function ChapterAwards() {
       ))}
 
       <div className="absolute inset-0 bg-dot-warm bg-dot-md opacity-50" />
-      <div className="story-bg-number light">{CHAPTERS[5].n}</div>
+      <div className="story-bg-number light">{CHAPTERS[6].n}</div>
 
       <div className="section-container w-full py-5 sm:py-7 md:py-8 lg:py-6 relative z-10">
         <Reveal delay={0.1}>
-          <FunPhrase phrase={CHAPTERS[5].phrase} emoji={CHAPTERS[5].emoji} />
+          <FunPhrase phrase={CHAPTERS[6].phrase} emoji={CHAPTERS[6].emoji} />
         </Reveal>
         <Reveal delay={0.2}>
           <h2 className="font-archivo font-black leading-[0.95] mb-2 tracking-tight"
@@ -853,11 +853,11 @@ function ChapterConnect({ onViewFull }: { onViewFull: () => void }) {
       <div className="absolute left-4 top-1/4 font-archivo font-black text-[200px] leading-none
                       text-orange-900/20 pointer-events-none select-none hidden lg:block">"</div>
 
-      <div className="story-bg-number dark">{CHAPTERS[6].n}</div>
+      <div className="story-bg-number dark">{CHAPTERS[7].n}</div>
 
       <div className="section-container w-full py-5 sm:py-8 md:py-10 lg:py-7 relative z-10">
         <Reveal delay={0.1}>
-          <FunPhrase phrase={CHAPTERS[6].phrase} emoji={CHAPTERS[6].emoji} dark />
+          <FunPhrase phrase={CHAPTERS[7].phrase} emoji={CHAPTERS[7].emoji} dark />
         </Reveal>
 
         <Reveal delay={0.22}>
@@ -999,7 +999,7 @@ export default function StoryShell({ onViewFull }: { onViewFull: () => void }) {
           <span className={`ml-2 text-xs font-bold hidden sm:block ${isDark ? 'text-orange-200/50' : 'text-text-muted'}`}>
             {String(idx + 1).padStart(2, '0')} / {CHAPTERS.length}
             <span className={`ml-1.5 font-medium ${isDark ? 'text-orange-200/70' : 'text-text-secondary'}`}>
-              — {CHAPTERS[idx].label}
+              - {CHAPTERS[idx].label}
             </span>
           </span>
         </div>
